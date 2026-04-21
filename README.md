@@ -1,39 +1,72 @@
-# Chirpy Starter
+#  System Administrator → Cloud Administrator (In Progress)
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Welcome to my GitHub portfolio.
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+I am a System Administrator with over 3 years of hands-on experience managing and maintaining IT infrastructure, including servers, networks, cloud environments, and automation processes. My work focuses on ensuring system reliability, security, and operational efficiency across production environments.
 
-## Why This Starter Exists
+I am currently strengthening my expertise in advanced system administration, automation using Bash and Python, cloud technologies, and monitoring solutions. I am actively transitioning into a Cloud Administrator role, where I can apply and expand my skills in scalable, cloud-based environments.
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+🔗 **Portfolio Website:**  
+ https://markg001.github.io/SysOps-Ledger/
 
-To unlock all features, the following files must be present in your Jekyll site:
+---
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+##  About This Repository
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+This GitHub serves as a **living portfolio and technical journal** of my journey in:
 
-## Usage
+- System Administration 
+- Cloud Engineering 
+- Infrastructure Automation
+- Monitoring & Observability
+- Real-world troubleshooting and operational practices
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+Rather than just showcasing finished projects, I document:
+- My **thought process**
+- **Problem-solving approaches**
+- **Lessons learned from failures**
+- **Practical implementations**
 
-## Contributing
+This reflects how real infrastructure work happens in production environments.
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+---
 
-## License
+## 🛠️ Core Technical Skills
 
-This work is published under [MIT][mit] License.
+### 🖥️ Systems Administration
+- Linux Server Administration (Ubuntu, CentOS, RHEL-based systems)
+- Windows Server Management (AD, DNS, DHCP, Group Policy)
+- User & Access Management
+- System Hardening & Security Best Practices
+- Backup & Disaster Recovery Planning
+- Scripting
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+### 🌐 Networking
+- TCP/IP, Subnetting, VLANs
+- Routing & Switching fundamentals
+- Firewall configuration and troubleshooting
+- VPNs and remote access solutions
+- Network troubleshooting (latency, packet loss, outages)
+
+### ☁️ Cloud (Learning & Transitioning)
+- Cloud fundamentals (IaaS, PaaS, SaaS)
+- Virtual Machines and Networking in cloud environments
+- Identity & Access Management (IAM)
+- Storage solutions and cost considerations
+- High availability and scalability concepts
+
+### ⚙️ Automation & Scripting
+- Bash scripting for system automation
+- Python for task automation and tooling
+- Cron jobs and scheduling
+- Infrastructure repeatability practices
+
+### 📊 Monitoring & Observability
+- System performance monitoring
+- Log analysis and troubleshooting
+- Uptime and availability tracking
+- Alerting strategies
+
+---
+
+## More details on my portfolio... 
