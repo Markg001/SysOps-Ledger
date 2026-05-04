@@ -1,9 +1,9 @@
 ---
 Title: "Active Directory Domain Services (AD DS) and DNS Setup on Windows Server 2022"
 Date: 2026-04-23   
-Categories: [Active Directory, Windows Server, DNS]
-Tags: [active directory, dns, windows server, ad ds, setup]
-
+categories: [DNS Setup in System Administration]
+tags: [active directory, dns, windows server, ad ds, setup]
+---
 ## DNS Configuration
 Since we are using our Domain Controller server as a DNS server also, there is not much benefit on using standalone internal DNS Server. So, we will use the same server for both AD DS and DNS services. After the installation of Active Directory Domain Services role, the DNS server role is also installed. Now, we need to configure the DNS server for our domain.
 1. Open Server Manager and then click on Tools and then DNS to open DNS Manager.
