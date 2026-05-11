@@ -80,14 +80,20 @@ i. In the Summary windows, click finish.
 j. Assign this user class to the network interface on Client1.
 Go to the click machine “Client1” and open CMD as administrator, and type the following command.
 Make sure you replace “Local Area Connection” with the interface name on your client machine
-```bashnetsh interface ipv4 set interface "Local Area Connection" admin=enabled userclass=Admins
-```
+
+````markdown
+```bash
+netsh interface ipv4 set interface "Local Area Connection" admin=enabled userclass=Admins
+````
 k. Now, we will release and renew the IP address on Client1 to apply the new policy.
-```bashipconfig /release
+````markdown
+```bash
+ipconfig /release
 ipconfig /renew
-```
+````
 l. After renewing the IP address, you can check the new IP configuration on Client1 by running the following command:
-```bashipconfig /all
+```bash
+ipconfig /all
 ``` 
 You should see that the default gateway is now set to “10.10.10.250”, which is the value we configured in the policy for the “Admins” user class. This means that the policy is working correctly and is applying the specified settings to clients that belong to the “Admins” user class.
 ## Conclusion
