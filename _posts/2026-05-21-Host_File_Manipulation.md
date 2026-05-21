@@ -27,7 +27,7 @@ The Hosts File is a local text file used by operating systems to manually map ho
 
 Before querying DNS servers, the operating system checks this file first.
 
-## Default Locations
+### Default Locations
 
 ### Windows
 
@@ -97,7 +97,7 @@ instead of the real Facebook servers.
 
 ---
 
-## Common Host File Attacks
+### Common Host File Attacks
 
 ### 1️ Fake Banking Websites
 
@@ -198,7 +198,7 @@ Since attackers redirect users to fake servers, SSL certificate mismatches may a
 
 # How to Check the Hosts File
 
-## Windows
+### Windows
 
 Open Notepad as Administrator:
 
@@ -208,7 +208,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 ---
 
-## Linux
+### Linux
 
 ```bash
 sudo nano /etc/hosts
@@ -301,7 +301,7 @@ Patch operating systems and browsers regularly to reduce malware infection vecto
 
 ---
 
-## Enterprise-Level Protection Strategies
+### Enterprise-Level Protection Strategies
 
 In organizational environments where Hosts File manipulation can have severe consequences, additional strategies include:
 
