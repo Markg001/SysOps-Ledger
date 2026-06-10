@@ -159,7 +159,7 @@ The client performs additional lookups.
 # DNS Resource Record Types
 
 DNS stores information using resource records.
-<img src="/assets/img/posts/all-about-dns/dns_record.png" alt="DNS Resource Record Types" class="shadow">
+<img src="/assets/img/posts/all-about-dns/dns_record.png" alt="DNS Resource Record Types">
 
 ## A Record
 An A record (Address Record) maps an FQDN (fully qualified domain name) to an IPv4 address.
@@ -168,8 +168,6 @@ Maps hostname to IPv4 address.
 ```text
 server01 → 192.168.1.10
 ```
-
----
 
 ## AAAA Record
 An AAAA record (Quad-A Record) maps an FQDN to an IPv6 address.
@@ -180,8 +178,6 @@ Maps hostname to IPv6 address.
 server01 → 2001:db8::1
 ```
 
----
-
 ## PTR Record
 A PTR record (Pointer Record) maps an IP address to a hostname. its the opposite of an A or AAAA record and is used in reverse lookup zones.
 Reverse lookup.
@@ -189,8 +185,6 @@ Reverse lookup.
 ```text
 192.168.1.10 → server01
 ```
-
----
 
 ## CNAME Record
 A CNAME record (Canonical Name Record) creates an alias for another hostname. It allows multiple hostnames to point to the same IP address without creating multiple A or AAAA records. Also known as an 
@@ -200,8 +194,6 @@ Alias record.
 www → webserver.contoso.com
 ```
 
----
-
 ## MX Record
 A MX record (Mail Exchanger Record) specifies the mail server responsible for accepting email messages on behalf of a domain. It is essential for email delivery and routing.
 Mail routing.
@@ -210,13 +202,9 @@ Mail routing.
 mail.contoso.com
 ```
 
----
-
 ## NS Record
 A NS record (Name Server Record) specifies the authoritative name servers for a domain. It indicates which DNS servers are responsible for handling queries for that domain.
 Name server information.
-
----
 
 ## SRV Record
 A SRV record (Service Record) specifies the location of services within a domain. It is commonly used in Active Directory to locate domain controllers and other services.
@@ -280,8 +268,24 @@ Add-DnsServerPrimaryZone `
 ---
 
 # Creating DNS Resource Records
+**More resources on the same click the below link:**
+
+[All about DNS Console](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc958958(v=technet.10)?redirectedfrom=MSDN)
+
+---
+
+[All about DNS Console](https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/dnsresource-record-management)
 
 ## A Record
+An A record (Address Record) maps an FQDN (fully qualified domain name) to an IPv4 address. its the most common type of DNS record and is used to resolve hostnames to IP addresses.
+How to create an A record:
+1. Open DNS Manager
+2. Expand the zone
+3. Right-click the zone
+4. Select **New Host (A or AAAA)**
+5. Enter the hostname and IP address
+6. Click **Add Host**
+7. Finish
 
 ```powershell
 Add-DnsServerResourceRecordA `
@@ -293,6 +297,15 @@ Add-DnsServerResourceRecordA `
 ---
 
 ## CNAME
+A CNAME record (Canonical Name Record) creates an alias for another hostname. It allows multiple hostnames to point to the same IP address without creating multiple A or AAAA records. Also known as an Alias record.
+How to create a CNAME record:
+1. Open DNS Manager
+2. Expand the zone
+3. Right-click the zone
+4. Select **New Alias (CNAME)**
+5. Enter the alias name and the fully qualified domain name (FQDN) of the target host
+6. Click **OK**
+7. Finish
 
 ```powershell
 Add-DnsServerResourceRecordCName `
