@@ -23,7 +23,7 @@ For example:
 
 | Hostname                                  | IP Address   |
 | ----------------------------------------- | ------------ |
-| [www.contoso.com](http://www.contoso.com) | 192.168.1.10 |
+| [www.contoso.com](https://www.contoso.com) | 192.168.1.10 |
 | dc01.contoso.com                          | 192.168.1.5  |
 
 Without DNS, users would need to remember numerical IP addresses instead of meaningful hostnames.
