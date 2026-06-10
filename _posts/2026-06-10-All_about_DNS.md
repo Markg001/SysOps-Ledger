@@ -9,7 +9,7 @@ tags: [ windows-server-2016, dnssec, powershell, network-security]
 
 ## Introduction
 
-The **Domain Name System (DNS)** is one of the most critical services in modern networks. In Microsoft Active Directory environments, DNS is not simply a name-resolution service—it is a foundational component that enables domain controllers, authentication, service discovery, replication, and numerous directory services to function properly.
+The **Domain Name System (DNS)** is one of the most critical services in modern networks. In Microsoft Active Directory environments, DNS is not simply a name-resolution service, it is a foundational component that enables domain controllers, authentication, service discovery, replication, and numerous directory services to function properly.
 
 This article provides a comprehensive overview of DNS in Active Directory, covering installation, configuration, security, advanced management, and PowerShell administration techniques.
 
@@ -159,9 +159,10 @@ The client performs additional lookups.
 # DNS Resource Record Types
 
 DNS stores information using resource records.
+<img src="/assets/img/posts/all-about-dns/dns_record.png" alt="DNS Resource Record Types" class="shadow">
 
 ## A Record
-
+An A record (Address Record) maps an FQDN (fully qualified domain name) to an IPv4 address.
 Maps hostname to IPv4 address.
 
 ```text
@@ -171,6 +172,7 @@ server01 → 192.168.1.10
 ---
 
 ## AAAA Record
+An AAAA record (Quad-A Record) maps an FQDN to an IPv6 address.
 
 Maps hostname to IPv6 address.
 
@@ -181,7 +183,7 @@ server01 → 2001:db8::1
 ---
 
 ## PTR Record
-
+A PTR record (Pointer Record) maps an IP address to a hostname. its the opposite of an A or AAAA record and is used in reverse lookup zones.
 Reverse lookup.
 
 ```text
@@ -191,7 +193,7 @@ Reverse lookup.
 ---
 
 ## CNAME Record
-
+A CNAME record (Canonical Name Record) creates an alias for another hostname. It allows multiple hostnames to point to the same IP address without creating multiple A or AAAA records. Also known as an 
 Alias record.
 
 ```text
@@ -201,7 +203,7 @@ www → webserver.contoso.com
 ---
 
 ## MX Record
-
+A MX record (Mail Exchanger Record) specifies the mail server responsible for accepting email messages on behalf of a domain. It is essential for email delivery and routing.
 Mail routing.
 
 ```text
@@ -211,14 +213,15 @@ mail.contoso.com
 ---
 
 ## NS Record
-
+A NS record (Name Server Record) specifies the authoritative name servers for a domain. It indicates which DNS servers are responsible for handling queries for that domain.
 Name server information.
 
 ---
 
 ## SRV Record
-
-Critical for Active Directory.
+A SRV record (Service Record) specifies the location of services within a domain. It is commonly used in Active Directory to locate domain controllers and other services.
+Service location.
+**Critical for Active Directory.**
 
 Example:
 
@@ -228,6 +231,20 @@ _ldap._tcp.dc._msdcs.contoso.com
 
 Used to locate domain controllers.
 
+## SOA Record
+Start of Authority record contains zone information. 
+Every DNS zone has an SOA record that defines the primary name server, responsible party, and zone settings. 
+example:
+
+```text 
+@ IN SOA ns1.contoso.com. admin.contoso.com. (
+    2024061001 ; Serial
+    3600       ; Refresh
+    1800       ; Retry
+    604800     ; Expire
+    86400      ; Minimum TTL
+)
+```
 ---
 
 # Creating a Forward Lookup Zone
@@ -245,7 +262,7 @@ mytestzone.local
 3. New Zone
 4. Primary Zone
 5. Enter:
-
+<img src="/assets/img/posts/all-about-dns/new_zone_wizard.jpg" alt="New Zone Wizard" class="shadow">
 ```text
 mytestzone.local
 ```
@@ -259,7 +276,7 @@ Add-DnsServerPrimaryZone `
 -Name "mytestzone.local" `
 -ZoneFile "mytestzone.local.dns"
 ```
-
+<img src="/assets/img/posts/all-about-dns/zone_creation.jpg" alt="PowerShell Zone Creation" class="shadow">
 ---
 
 # Creating DNS Resource Records
