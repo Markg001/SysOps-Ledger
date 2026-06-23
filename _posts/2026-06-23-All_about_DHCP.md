@@ -1,10 +1,9 @@
 ---
-
-title: "Installing and Configuring DHCP in Windows Server"
-date: 2026-06-23
+Title: "Installing and Configuring DHCP in Windows Server"
+Date: 2026-06-23
 categories: [DHCP, Windows Server, Networking]
 tags: [dhcp, windows server, networking, active directory, ip addressing, windows server administration, system administration]
--------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Installing and Configuring DHCP in Windows Server
 
