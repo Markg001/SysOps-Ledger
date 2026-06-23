@@ -17,7 +17,6 @@ DHCP automates the process of assigning IP addresses and other network configura
 
 Whether you're managing a small business network or a large Active Directory environment, understanding DHCP is a fundamental skill for every IT professional.
 
----
 
 # What is DHCP?
 
@@ -34,7 +33,6 @@ Instead of manually configuring every device, DHCP dynamically provides:
 
 DHCP significantly simplifies network administration by automatically managing IP address allocation.
 
----
 
 # Why DHCP is Important
 
@@ -72,8 +70,6 @@ Thousands of devices can be managed efficiently.
 
 DHCP tracks assigned addresses and prevents duplicates.
 
----
-
 # Understanding IP Addresses
 
 Before learning DHCP, it is important to understand IP addressing.
@@ -95,8 +91,6 @@ Example:
 ```
 
 Each device on a network requires a unique IP address.
-
----
 
 # Static vs Dynamic IP Addressing
 
@@ -127,8 +121,6 @@ Commonly used for:
 * Manual management
 * Higher chance of configuration errors
 
----
-
 ## Dynamic IP Address
 
 Assigned automatically by DHCP.
@@ -143,7 +135,6 @@ Assigned automatically by DHCP.
 
 * Address may change after lease expiration
 
----
 
 # DHCP Architecture
 
@@ -170,13 +161,10 @@ Examples:
 * Printers
 * VoIP Phones
 
----
-
 # How DHCP Works
 
 DHCP uses a process called **DORA**.
 
----
 
 ## Step 1: DHCP Discover
 
@@ -189,8 +177,6 @@ DHCPDISCOVER
 Meaning:
 
 > "Is there a DHCP server available?"
-
----
 
 ## Step 2: DHCP Offer
 
@@ -206,8 +192,6 @@ Containing:
 * Lease duration
 * Network settings
 
----
-
 ## Step 3: DHCP Request
 
 The client requests the offered address:
@@ -215,8 +199,6 @@ The client requests the offered address:
 ```text
 DHCPREQUEST
 ```
-
----
 
 ## Step 4: DHCP Acknowledgement
 
@@ -228,7 +210,6 @@ DHCPACK
 
 The client can now use the assigned IP address.
 
----
 
 # DHCP Lease Process
 
@@ -247,8 +228,6 @@ Before expiration:
 
 This helps recycle unused addresses.
 
----
-
 # DHCP Scope
 
 A scope defines a range of IP addresses available for assignment.
@@ -263,8 +242,6 @@ to
 
 The DHCP server allocates addresses only from this range.
 
----
-
 # Scope Components
 
 ## Scope Name
@@ -275,15 +252,11 @@ Example:
 Office LAN
 ```
 
----
-
 ## Start IP Address
 
 ```text
 192.168.10.100
 ```
-
----
 
 ## End IP Address
 
@@ -291,15 +264,11 @@ Office LAN
 192.168.10.200
 ```
 
----
-
 ## Subnet Mask
 
 ```text
 255.255.255.0
 ```
-
----
 
 ## Lease Duration
 
@@ -308,8 +277,6 @@ Example:
 ```text
 8 Days
 ```
-
----
 
 # DHCP Exclusions
 
@@ -330,8 +297,6 @@ Useful for:
 * Printers
 * Network appliances
 * Static devices
-
----
 
 # DHCP Reservations
 
@@ -357,13 +322,9 @@ Benefits:
 * Consistent addressing
 * No manual static configuration
 
----
-
 # DHCP Options
 
 DHCP can provide additional configuration settings.
-
----
 
 ## Option 003 – Router
 
@@ -375,8 +336,6 @@ Example:
 192.168.10.1
 ```
 
----
-
 ## Option 006 – DNS Servers
 
 Example:
@@ -386,8 +345,6 @@ Example:
 192.168.10.11
 ```
 
----
-
 ## Option 015 – DNS Domain Name
 
 Example:
@@ -396,13 +353,9 @@ Example:
 contoso.com
 ```
 
----
-
 ## Option 042 – NTP Server
 
 Provides time synchronization information.
-
----
 
 ## Option 066 & 067
 
@@ -411,8 +364,6 @@ Commonly used for:
 * PXE Boot
 * Network Deployment Services
 * VoIP Phones
-
----
 
 # Installing DHCP Server Role
 
@@ -478,8 +429,6 @@ Steps:
 3. Select Authorize
 4. Refresh DHCP Console
 
----
-
 # Creating a DHCP Scope
 
 After installation:
@@ -493,8 +442,6 @@ After installation:
 7. Set lease duration
 8. Configure DHCP options
 9. Activate scope
-
----
 
 # DHCP Failover
 
@@ -517,9 +464,6 @@ Benefits:
 * High availability
 * Business continuity
 * Reduced downtime
-
----
-
 # DHCP Security Best Practices
 
 ## Authorize DHCP Servers
@@ -546,8 +490,6 @@ Limit DHCP administration privileges.
 
 Maintain detailed documentation for troubleshooting.
 
----
-
 # DHCP Troubleshooting
 
 ## Check IP Configuration
@@ -556,15 +498,11 @@ Maintain detailed documentation for troubleshooting.
 ipconfig /all
 ```
 
----
-
 ## Release Address
 
 ```powershell
 ipconfig /release
 ```
-
----
 
 ## Renew Address
 
@@ -572,15 +510,11 @@ ipconfig /release
 ipconfig /renew
 ```
 
----
-
 ## Verify DHCP Service
 
 ```powershell
 Get-Service DHCPServer
 ```
-
----
 
 ## Common DHCP Issues
 
@@ -591,9 +525,6 @@ Possible causes:
 * DHCP service stopped
 * Scope exhausted
 * Network connectivity issues
-
----
-
 ### Duplicate IP Addresses
 
 Possible causes:
@@ -601,15 +532,11 @@ Possible causes:
 * Static address conflicts
 * Rogue DHCP servers
 
----
-
 ### Incorrect Gateway
 
 Possible causes:
 
 * Misconfigured DHCP options
-
----
 
 ### Clients Receiving APIPA Addresses
 
@@ -624,7 +551,6 @@ Indicates:
 * DHCP server unreachable
 * No available lease
 
----
 
 # DHCP in Home Networks
 
@@ -650,8 +576,6 @@ Example:
 192.168.1.102
 ```
 
----
-
 # DHCP in Enterprise Networks
 
 Enterprise DHCP deployments often integrate with:
@@ -664,8 +588,6 @@ Enterprise DHCP deployments often integrate with:
 * VoIP Infrastructure
 
 Proper DHCP design ensures reliable network connectivity across the organization.
-
----
 
 # Conclusion
 
